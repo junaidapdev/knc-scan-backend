@@ -1,0 +1,39 @@
+# Dependencies
+node_modules/
+
+# Build output
+dist/
+build/
+
+# Environment
+.env
+.env.local
+.env.*.local
+
+# Editor / tooling
+.cursor/
+.vscode/
+.idea/
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Test coverage
+coverage/
+.nyc_output/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Workspace scratch files (NEVER commit these)
+# CLAUDE.md, README.md, PROJECT_LOG.md ARE committed — do not add them here.
+CrossFix.md
+DeploymentFix.md
+TempNotes.md
+SCRATCH.md
+*Fix.md
+*Notes.md

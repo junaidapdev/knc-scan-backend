@@ -1,0 +1,61 @@
+{
+  "name": "kayan-backend",
+  "version": "0.1.0",
+  "description": "Kayan Sweets V1 Backend — Node.js + Express + TypeScript + Supabase",
+  "main": "dist/server.js",
+  "scripts": {
+    "dev": "nodemon --watch src --ext ts --exec \"ts-node --transpile-only -r tsconfig-paths/register src/server.ts\"",
+    "build": "tsc && tsc-alias",
+    "start": "node dist/server.js",
+    "lint": "eslint . --ext .ts",
+    "lint:fix": "eslint . --ext .ts --fix",
+    "typecheck": "tsc --noEmit",
+    "test": "jest",
+    "seed:pilot": "ts-node -r tsconfig-paths/register src/supabase/seed-pilot.ts",
+    "test:smoke": "ts-node -r tsconfig-paths/register tests/smoke/customer-journey.smoke.ts"
+  },
+  "keywords": [
+    "kayan",
+    "loyalty",
+    "backend"
+  ],
+  "author": "",
+  "license": "UNLICENSED",
+  "private": true,
+  "dependencies": {
+    "@sentry/node": "^8.40.0",
+    "@supabase/supabase-js": "^2.45.0",
+    "bcrypt": "^5.1.1",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "express-rate-limit": "^7.4.0",
+    "helmet": "^7.1.0",
+    "jsonwebtoken": "^9.0.2",
+    "winston": "^3.14.2",
+    "zod": "^3.23.8"
+  },
+  "devDependencies": {
+    "@types/bcrypt": "^5.0.2",
+    "@types/cors": "^2.8.17",
+    "@types/express": "^4.17.21",
+    "@types/jest": "^29.5.12",
+    "@types/jsonwebtoken": "^9.0.6",
+    "@types/node": "^20.14.11",
+    "@types/supertest": "^6.0.2",
+    "@typescript-eslint/eslint-plugin": "^7.16.1",
+    "@typescript-eslint/parser": "^7.16.1",
+    "eslint": "^8.57.0",
+    "jest": "^29.7.0",
+    "nodemon": "^3.1.4",
+    "supertest": "^7.0.0",
+    "ts-jest": "^29.2.2",
+    "ts-node": "^10.9.2",
+    "tsc-alias": "^1.8.10",
+    "tsconfig-paths": "^4.2.0",
+    "typescript": "^5.5.3"
+  },
+  "engines": {
+    "node": ">=20.0.0"
+  }
+}

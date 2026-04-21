@@ -1,0 +1,21 @@
+# docker-compose for Kayan Sweets backend.
+#
+# Supabase is intentionally NOT a service here — this project points at
+# Supabase Cloud for all environments (pilot and prod). If you want a fully
+# offline stack, run `supabase start` separately (per the Supabase CLI docs)
+# and set SUPABASE_URL + SUPABASE_*_KEY in .env to the values the CLI prints.
+
+services:
+  api:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      # GIT_SHA is read from the host shell; if unset the Dockerfile falls
+      # back to "dev". Run compose like:
+      #   GIT_SHA=$(git rev-parse --short HEAD) docker compose up --build
+      args:
+        GIT_SHA: ${GIT_SHA:-dev}
+    env_file: .env
+    ports:
+      - "3000:3000"
+    restart: unless-stopped
