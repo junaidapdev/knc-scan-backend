@@ -27,6 +27,7 @@ export async function registerCustomer(req: Request, res: Response, next: NextFu
       p_language: payload.language,
       p_consent_marketing: payload.consent_marketing,
       p_branch_scan_id: payload.branch_scan_id,
+      p_bill_amount: payload.bill_amount,
     });
 
     if (error) {

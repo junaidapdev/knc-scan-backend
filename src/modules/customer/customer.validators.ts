@@ -10,6 +10,10 @@ export const registerSchema = z.object({
   language: z.enum(['ar', 'en']),
   consent_marketing: z.literal(true),
   branch_scan_id: z.string().uuid(),
+  bill_amount: z
+    .number()
+    .refine((n) => Number.isFinite(n), 'bill_amount must be a finite number')
+    .refine((n) => n >= 1 && n <= 9999, 'bill_amount must be between 1 and 9999 SAR'),
 });
 
 export const customerValidators = {

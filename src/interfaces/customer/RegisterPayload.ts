@@ -7,4 +7,5 @@ export interface RegisterPayload {
   language: 'ar' | 'en';
   consent_marketing: boolean;
   branch_scan_id: string;
+  bill_amount: number;
 }

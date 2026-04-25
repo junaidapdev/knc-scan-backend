@@ -32,7 +32,8 @@ describe('Customer Registration Integration', () => {
       preferred_branch_id: '123e4567-e89b-12d3-a456-426614174000',
       language: 'en',
       consent_marketing: true,
-      branch_scan_id: '123e4567-e89b-12d3-a456-426614174001'
+      branch_scan_id: '123e4567-e89b-12d3-a456-426614174001',
+      bill_amount: 75,
     };
 
     it('should register successfully and issue session token', async () => {
