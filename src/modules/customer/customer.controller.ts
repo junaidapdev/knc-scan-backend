@@ -74,7 +74,7 @@ export async function getCustomerProfile(req: Request, res: Response, next: Next
 
     const { data, error } = await supabaseAdmin
       .from('customers')
-      .select('id, name, phone, current_stamps, last_scan_at, total_visits')
+      .select('id, name, phone, current_stamps, last_scan_at, total_visits, cards_completed')
       .eq('id', customerId)
       .single();
 

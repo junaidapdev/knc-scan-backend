@@ -5,4 +5,5 @@ export interface CustomerProfile {
   current_stamps: number;
   last_scan_at: string | null;
   total_visits: number;
+  cards_completed: number;
 }
