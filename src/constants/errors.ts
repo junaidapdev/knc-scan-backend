@@ -45,6 +45,7 @@ export const ERROR_CODES = {
   NOT_FOUND: 'NOT_FOUND',
   RATE_LIMITED: 'RATE_LIMITED',
   SERVICE_NOT_READY: 'SERVICE_NOT_READY',
+  SMS_PROVIDER_FAILED: 'SMS_PROVIDER_FAILED',
 } as const;
 
 export type ErrorCode = (typeof ERROR_CODES)[keyof typeof ERROR_CODES];
@@ -178,5 +179,9 @@ export const ERROR_MESSAGES: Record<ErrorCode, BilingualMessage> = {
   [ERROR_CODES.SERVICE_NOT_READY]: {
     en: 'The service is not ready to handle requests.',
     ar: 'الخدمة غير جاهزة لمعالجة الطلبات.',
+  },
+  [ERROR_CODES.SMS_PROVIDER_FAILED]: {
+    en: 'We could not send the verification SMS. Please try again in a moment.',
+    ar: 'تعذر إرسال رمز التحقق عبر الرسائل القصيرة. الرجاء المحاولة بعد قليل.',
   },
 };
